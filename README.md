@@ -59,19 +59,11 @@ Set up an Express.js server with a MySQL connection.
 | `/api/subcategories/:type` | `GET` | Fetch subcategories by account type |
 | `/api/accounts` | `POST` | Create a new account |
 
-### API Details
-- `/api/entities`: Query all rows from the `entities` table.
-- `/api/account-types`: Return a hardcoded array.
-- `/api/subcategories/:type`: Query subcategories by `Account_Type`.
-- `/api/accounts`: Accepts `name`, `entityId`, `type`, `subcategoryId`, and optional `openingBalance`.
-
 ### Validations
-- `Name` must be unique.
+- `Account Name` must be unique.
 - `Entity` and `Subcategory` IDs must exist.
 - `OpeningBalance` defaults to `0` if not provided.
-
-> **Note:** Use modular database connections.
-
+- 
 ## Frontend Requirements
 
 Build a React form with these fields:
@@ -87,7 +79,7 @@ Build a React form with these fields:
 - Submit the form via `POST /api/accounts`.
 - Show a success or error message based on the server's response.
 - Use Axios or Fetch for API calls.
-- Include loading indicators where necessary.
+- Include loading indicators where necessary (Optional).
 
 ## API Convention
 All endpoints must be under `/api/`, e.g., `/api/entities`, `/api/accounts`.
