@@ -45,7 +45,6 @@ CREATE TABLE accounts (
   FOREIGN KEY (Subcategory) REFERENCES account_subcategories(ID)
 );
 ```
-
 ## Backend Requirements
 
 Set up an Express.js server with a MySQL connection.
@@ -58,12 +57,7 @@ Set up an Express.js server with a MySQL connection.
 | `/api/account-types` | `GET` | Return static account types (`AST`, `LIA`, `EQT`, `REV`, `EXP`) |
 | `/api/subcategories/:type` | `GET` | Fetch subcategories by account type |
 | `/api/accounts` | `POST` | Create a new account |
-
-### Validations
-- `Account Name` must be unique.
-- `Entity` and `Subcategory` IDs must exist.
-- `OpeningBalance` defaults to `0` if not provided.
-- 
+  
 ## Frontend Requirements
 
 Build a React form with these fields:
@@ -75,7 +69,7 @@ Build a React form with these fields:
 
 ### Behavior
 - Selecting an Account Type should dynamically fetch subcategories.
-- Validate all fields before submission.
+- Validate all fields before submission (Optional).
 - Submit the form via `POST /api/accounts`.
 - Show a success or error message based on the server's response.
 - Use Axios or Fetch for API calls.
