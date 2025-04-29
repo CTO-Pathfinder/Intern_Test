@@ -73,6 +73,7 @@ Build a React form with these fields:
 - Form should be visually appealing (Recommended).
 - Validate all fields before submission (Optional).
 - Submit the form via `POST /api/accounts`.
+- The `/api/accounts` endpoint should expect a JSON payload `{ name, ent, type, subCat, openBalance }`.
 - Use Axios or Fetch for API calls.
 - Show a success or error message based on the server's response.
 - Include loading indicators where necessary (Optional).
