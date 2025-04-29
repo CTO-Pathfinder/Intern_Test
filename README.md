@@ -68,13 +68,13 @@ Build a React form with these fields:
 
 ### Behavior
 - Selecting an Account Type should dynamically fetch subcategories.
-- Changing choice in Account Type should reset Subcategory.
+- Changing Account Type should reset Subcategory.
 - All fields should be required.
 - Form should be visually appealing (Recommended).
 - Validate all fields before submission (Optional).
 - Submit the form via `POST /api/accounts`.
-- Show a success or error message based on the server's response.
 - Use Axios or Fetch for API calls.
+- Show a success or error message based on the server's response.
 - Include loading indicators where necessary (Optional).
 
 ## API Convention
@@ -86,6 +86,6 @@ Keep the UI simple and intuitive with proper form validation and dynamic dropdow
 ## Recommendations
 - The frontend should be your top priority.
 - Try to get the main logic of your form working first, including setting up calls to your api endpoints.
-- While styling your form is recommended, it should be the last thing you do.
+- Whilst styling your form is recommended, it should be the last thing you do.
 - If you need help with anything, feel free to ask!
 - Relax and have fun!
