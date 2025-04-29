@@ -47,28 +47,30 @@ CREATE TABLE accounts (
 ```
 ## Backend Requirements
 
-Set up an Express.js server with a MySQL connection.
+Set up the following endpoints in the .
 
 ### API Endpoints
 
 | Endpoint | Method | Description |
 |:---------|:-------|:------------|
-| `/api/entities` | `GET` | Fetch all entities |
-| `/api/account-types` | `GET` | Return static account types (`AST`, `LIA`, `EQT`, `REV`, `EXP`) |
-| `/api/subcategories/:type` | `GET` | Fetch subcategories by account type |
+| `/api/ents` | `GET` | Fetch all entities |
+| `/api/subCats?accType=<type>` | `GET` | Fetch subcategories by account type |
 | `/api/accounts` | `POST` | Create a new account |
   
 ## Frontend Requirements
 
 Build a React form with these fields:
 - **Account Name** (text input)
-- **Entity** (dropdown - `/api/entities`)
-- **Account Type** (dropdown - `/api/account-types`)
-- **Subcategory** (dropdown - depends on selected Account Type)
+- **Entity** (dropdown - `/api/ents`)
+- **Account Type** (dropdown - `static list`)
+- **Subcategory** (dropdown - `/api/subCats?accType=<type>`)
 - **Opening Balance** (number input)
 
 ### Behavior
 - Selecting an Account Type should dynamically fetch subcategories.
+- Changing choice in Account Type should reset Subcategory.
+- All fields should be required.
+- Form should be visually appealing (Recommended).
 - Validate all fields before submission (Optional).
 - Submit the form via `POST /api/accounts`.
 - Show a success or error message based on the server's response.
@@ -76,7 +78,14 @@ Build a React form with these fields:
 - Include loading indicators where necessary (Optional).
 
 ## API Convention
-All endpoints must be under `/api/`, e.g., `/api/entities`, `/api/accounts`.
+All endpoints must be under `/api/`, e.g., `/api/ents`, `/api/accounts`.
 
 ## Design Requirements
 Keep the UI simple and intuitive with proper form validation and dynamic dropdowns.
+
+## Recommendations
+- The frontend should be your top priority.
+- Try to get the main logic of your form working first, including setting up calls to your api endpoints.
+- While styling your form is recommended, it should be the last thing you do.
+- If you need help with anything, feel free to ask!
+- Relax and have fun!
