@@ -47,7 +47,7 @@ CREATE TABLE accounts (
 ```
 ## Backend Requirements
 
-Set up the following endpoints in the .
+Set up the following endpoints at your backend:
 
 ### API Endpoints
 
