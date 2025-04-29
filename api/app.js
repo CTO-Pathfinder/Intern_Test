@@ -2,6 +2,9 @@ const express = require('express');
 const cors = require('cors')
 const mysql = require('mysql2/promise')
 const dotenv = require('dotenv')
+const bodyParser = require('body-parser')
+
+const jsonParser = bodyParser.json()
 
 dotenv.config()
 

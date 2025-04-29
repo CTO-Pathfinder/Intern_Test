@@ -1,12 +1,8 @@
+import AccountForm from './AccountForm/AccountForm';
 import './App.css';
 
 function App() {
-
-  return (
-    <div>
-    
-    </div>
-  );
+    return <AccountForm/>
 }
 
 export default App;
